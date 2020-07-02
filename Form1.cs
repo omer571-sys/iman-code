@@ -18,6 +18,8 @@ namespace İmanCode
             InitializeComponent();
         }
 
+        //Bu yazılımın tüm hakları GPL lisansı altında korunmaktadır.
+
         private void Save_As()
         {
             SaveFileDialog sf = new SaveFileDialog();
