@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +18,7 @@ namespace İmanCode
             InitializeComponent();
         }
 
-        //Bu yazılımın tüm hakları GPL lisansı altında korunmaktadır.
+        // Bu yazılımın tüm hakları GPL lisansı altında korunmaktadır.
 
         private void Save_As()
         {
@@ -51,21 +51,17 @@ namespace İmanCode
         {
             Save_As();
         }
-
+        
         private void yeniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Bütün Yazıları siler
             fastColoredTextBox1.Text = "";
         }
-
+        
         string filepath, filename;
 
         private void OpenDlg() 
         {
-
-            //openfiledialog oluşturma
             OpenFileDialog of = new OpenFileDialog();
-            //Dosya filtreleme
             if (fastColoredTextBox1.Language == FastColoredTextBoxNS.Language.CSharp)
                 of.Filter = "C# Dosyası|*.cs|Tüm Dosyalar|*.*";
             else if (fastColoredTextBox1.Language == FastColoredTextBoxNS.Language.HTML)
@@ -98,7 +94,7 @@ namespace İmanCode
                 {
                     fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML;
                 }
-                else if (ff.Extension == ".Js")
+                else if (ff.Extension == ".js")
                 {
                     fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.JS;
                 }
@@ -203,12 +199,7 @@ namespace İmanCode
         {
             fastColoredTextBox1.Redo();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void hepsiniSeçToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fastColoredTextBox1.SelectAll();
@@ -300,4 +291,3 @@ namespace İmanCode
 
     }
 }
-                                       
